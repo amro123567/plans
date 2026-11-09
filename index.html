@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amro Academy – Learning Plans</title>
+<link rel="icon" href="image.png">
+<style>
+:root{--sky:#87CEEB;--sky-mid:#5fb8e0;--sky-light:#eaf7fd;--sky-soft:#cdebf7;--sky-dark:#2f8fc4;--deep:#0c3a52;--ink:#1b2730;--muted:#4f6573;--bg:#f2fafe;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px;width:100%}
+header.hero{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-mid) 100%);color:var(--deep);padding:44px 0 56px;border-radius:0 0 28px 28px;box-shadow:0 8px 24px rgba(47,143,196,.18)}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.logo{height:72px;width:72px;object-fit:contain;border-radius:16px;background:#fff;padding:6px;box-shadow:0 4px 12px rgba(12,58,82,.12)}
+.logo-fallback{display:none;height:72px;width:72px;border-radius:16px;background:#fff;color:var(--sky-dark);font-weight:800;font-size:26px;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(12,58,82,.12)}
+.brand-name{font-weight:800;font-size:22px;letter-spacing:.01em}
+.brand-sub{font-size:13px;font-weight:600;opacity:.8;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{margin:0 0 10px;font-size:40px;line-height:1.15;max-width:640px}
+.hero p{margin:0;font-size:18px;max-width:620px;font-weight:500}
+main{flex:1;padding:36px 0 50px}
+h2{font-size:22px;color:var(--sky-dark);margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.plan{background:var(--card);border:1px solid var(--sky-soft);border-top:5px solid var(--sky);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.plan:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(47,143,196,.18)}
+.tag{align-self:flex-start;background:var(--sky-light);color:var(--sky-dark);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.plan h3{margin:0 0 6px;font-size:20px;color:var(--deep);line-height:1.25}
+.plan p{margin:0 0 14px;color:var(--muted);font-size:15px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px;padding:0;list-style:none}
+.facts li{background:var(--bg);border:1px solid var(--sky-soft);border-radius:8px;padding:3px 9px;font-size:13px;font-weight:600;color:var(--deep)}
+.btn{margin-top:auto;align-self:flex-start;background:var(--sky-dark);color:#fff;font-weight:700;font-size:15px;padding:9px 18px;border-radius:999px}
+.plan:hover .btn{background:var(--deep)}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.why div{background:var(--sky-light);border-radius:14px;padding:16px 18px}
+.why b{display:block;color:var(--deep);margin-bottom:2px}
+.why span{color:var(--muted);font-size:14.5px}
+footer{background:var(--sky-light);border-top:1px solid var(--sky-soft);padding:18px 0;text-align:center;color:var(--muted);font-size:14px}
+footer b{color:var(--deep)}
+@media (max-width:700px){.hero h1{font-size:30px}.hero p{font-size:16px}.why{grid-template-columns:1fr}header.hero{padding:30px 0 40px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img class="logo" src="image.png" alt="Amro Academy logo"
+           onerror="if(!this.dataset.t){this.dataset.t=1;this.src='../image.png'}else{this.style.display='none';this.nextElementSibling.style.display='flex'}">
+      <div class="logo-fallback" aria-hidden="true">AA</div>
+      <div><div class="brand-name">Amro Academy</div><div class="brand-sub">Math &amp; SAT tutoring</div></div>
+    </div>
+    <h1>Welcome to your learning plans</h1>
+    <p>Choose a plan below to see the sessions, topics, homework and how progress is tracked.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Our plans</h2>
+    <p class="sub">Each plan is built around the student's school program and goals.</p>
+    <div class="grid" id="plans"></div>
+
+    <div class="why">
+      <div><b>Structured sessions</b><span>Every session follows a clear plan: review, new lesson, practice and SAT connection.</span></div>
+      <div><b>Regular homework</b><span>Homework after each session, checked and corrected together.</span></div>
+      <div><b>Progress you can see</b><span>Tests, weekly updates and a written report at the end of each month.</span></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap"><b>Amro Academy</b> · Mohamad Ali Amro</div></footer>
+
+<script>
+/* ===== Add a new plan: copy one { ... } block, edit it, and put the plan's file name in "link". ===== */
+const PLANS = [
+  {
+    tag: "Grade 10 · Math",
+    title: "Grade 10 Math – One-Month Plan",
+    description: "Lebanese Grade 10 program (English section) with an early start on SAT math skills.",
+    facts: ["10 sessions", "1 hour each", "4 weeks", "2 tests"],
+    link: "grade10.html"
+  }
+];
+
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+document.getElementById("plans").innerHTML = PLANS.map(p => `
+  <a class="plan" href="${esc(p.link)}">
+    <span class="tag">${esc(p.tag)}</span>
+    <h3>${esc(p.title)}</h3>
+    <p>${esc(p.description)}</p>
+    <ul class="facts">${p.facts.map(f => `<li>${esc(f)}</li>`).join("")}</ul>
+    <span class="btn">View plan →</span>
+  </a>`).join("");
+</script>
+</body>
+</html>
