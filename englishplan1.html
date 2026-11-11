@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAT Reading &amp; Writing Plan</title><style>
+:root{--sky:#87CEEB;--sky-mid:#5fb8e0;--sky-light:#eaf7fd;--sky-soft:#cdebf7;--sky-dark:#2f8fc4;--deep:#0c3a52;--ink:#1b2730;--muted:#4f6573;--line:#cdebf7;--bg:#f2fafe;--card:#fff;--test:#fff4e0;--test-ink:#a85d00}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:28px 16px 60px}
+.hero{background:linear-gradient(135deg,var(--sky) 0%,var(--sky-mid) 100%);color:var(--deep);border-radius:16px;padding:24px 26px;display:flex;align-items:center;gap:18px;box-shadow:0 6px 18px rgba(47,143,196,.18)}
+.hero img{height:64px;width:auto;border-radius:10px;background:#fff;padding:4px}
+.hero .eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.8}
+.hero h1{margin:4px 0 6px;font-size:28px;line-height:1.2;color:var(--deep)}
+.hero p{margin:0;font-weight:600}
+.lead{font-size:17px;margin:20px 0 6px}
+h2{font-size:21px;color:var(--sky-dark);margin:30px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--sky)}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.g{background:var(--sky-light);border:1px solid var(--sky-soft);border-left:4px solid var(--sky);border-radius:12px;padding:12px 14px}
+.g .k{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sky-dark)}
+.g .v{font-weight:600;margin-top:2px;color:var(--deep)}
+.note{color:var(--muted);font-size:14.5px;margin:4px 0 10px}
+.table-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--sky-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--sky-soft);vertical-align:top}
+th{background:var(--sky);color:var(--deep);font-weight:700;white-space:nowrap}
+tbody tr:nth-child(even) td{background:#f7fcfe}
+tr:last-child td{border-bottom:none}
+td.n{font-weight:800;color:var(--sky-dark);text-align:center;width:34px}
+tr.test td{background:var(--test)!important}
+tr.test td.t{color:var(--test-ink);font-weight:700}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.step{background:var(--card);border:1px solid var(--sky-soft);border-top:4px solid var(--sky);border-radius:12px;padding:12px 14px}
+.step .m{font-size:22px;font-weight:800;color:var(--sky-dark);line-height:1}
+.step .m span{font-size:13px;font-weight:600;color:var(--muted)}
+.step b{display:block;margin:4px 0 2px;color:var(--deep)}
+.step p{margin:0;font-size:14px;color:var(--muted)}
+ul{padding-left:20px;margin:8px 0}
+li{margin-bottom:6px}
+li::marker{color:var(--sky-dark)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{background:var(--card);border:1px solid var(--sky-soft);border-top:4px solid var(--sky);border-radius:12px;padding:14px 18px}
+.box h3{margin:0 0 4px;font-size:16px;color:var(--sky-dark)}
+.sign{margin-top:28px;background:var(--sky-light);border-left:5px solid var(--sky);border-radius:0 12px 12px 0;padding:14px 18px}
+.sign b{display:block;color:var(--deep)}
+h3{color:var(--sky-dark)!important}
+@media (max-width:700px){.steps{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}.hero h1{font-size:24px}}
+@media print{body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}.wrap{padding:0}h2{break-after:avoid}.table-wrap,.box,.step{break-inside:avoid}}
+
+.domain{background:var(--card);border:1px solid var(--sky-soft);border-radius:12px;padding:14px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center}
+.domain h3{margin:0;font-size:16px;color:var(--deep)!important}
+.domain .share{font-size:13px;color:var(--muted)}
+.segs{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin:6px 0 2px;grid-column:1/-1}
+.segs i{height:12px;border:1.5px solid var(--deep);border-radius:2px}
+.segs i.f{background:var(--deep)}
+.band{font-weight:700;color:var(--deep);grid-column:1/-1;font-size:14.5px}
+.prio{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.p1{background:#fdecea;color:#c5221f}.p2{background:#fff4e0;color:#a85d00}.p3{background:#e7f5ec;color:#1e8e3e}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dom-tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--sky-light);color:var(--sky-dark);white-space:nowrap}
+.find{background:var(--card);border:1px solid var(--sky-soft);border-left:4px solid var(--sky);border-radius:0 12px 12px 0;padding:10px 14px;margin-bottom:8px}
+.find b{color:var(--deep)}
+@media (max-width:700px){.dgrid{grid-template-columns:1fr}}
+
+.sess{background:var(--card);border:1px solid var(--sky-soft);border-radius:14px;margin:12px 0;overflow:hidden}
+.sess>summary{cursor:pointer;list-style:none;padding:14px 18px;font-weight:700;font-size:17px;color:var(--deep);background:var(--sky-light);display:flex;gap:10px;align-items:center}
+.sess>summary::-webkit-details-marker{display:none}
+.sess>summary::after{content:"▾";margin-left:auto;color:var(--sky-dark);transition:transform .2s}
+.sess:not([open])>summary::after{transform:rotate(-90deg)}
+.sn{background:var(--sky-dark);color:#fff;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.sbody{padding:6px 20px 18px}
+.sbody h4{font-size:16px;color:var(--sky-dark);margin:20px 0 8px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:12px}
+.flow div{background:var(--sky-light);border-radius:8px;padding:8px 10px;font-size:13px;color:var(--muted)}
+.flow b{display:block;color:var(--deep);font-size:14px}
+table.mini{width:100%;border-collapse:collapse;font-size:14px;background:var(--card)}
+table.mini td,table.mini th{padding:7px 10px;border-bottom:1px solid var(--sky-soft);vertical-align:top}
+table.mini th{font-size:13px}
+.sbody>table.mini{border:1px solid var(--sky-soft);border-radius:10px;border-collapse:separate;border-spacing:0;overflow:hidden}
+.sbody>table.mini td:first-child{font-weight:700;color:var(--deep);white-space:nowrap}
+.rules td:first-child{width:22px;text-align:center}
+.rules td:nth-child(2){white-space:nowrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--deep)}
+.rules tr.ok td:first-child{color:#1e8e3e}.rules tr.bad td:first-child{color:#c5221f}
+.rules tr.bad td:last-child{color:#7a2b25}
+.method li,.never li{margin-bottom:5px}
+.traps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.traps div{background:#fff7f6;border:1px solid #f6d5d2;border-radius:10px;padding:9px 11px;font-size:13.5px;color:var(--muted)}
+.traps b{display:block;color:#a3261e;font-size:14px;margin-bottom:2px}
+.ex{background:var(--sky-light);border-left:4px solid var(--sky-dark);border-radius:0 10px 10px 0;padding:10px 14px;margin:10px 0;font-size:14.5px}
+.ex p{margin:6px 0}.ex-h{font-weight:800;color:var(--deep);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.hw{background:var(--test);color:#5c3a00;border-radius:10px;padding:10px 14px;margin-top:16px;font-size:14.5px}
+.tip{background:#e7f5ec;color:#174d2a;border-radius:10px;padding:10px 14px;margin-top:8px;font-size:14.5px}
+.sm{font-size:13.5px;color:var(--muted)}
+.exs{background:var(--sky-light);border-radius:6px;padding:6px 10px;margin:6px 0 0}
+.prac li{margin-bottom:12px;line-height:1.6}
+.ans{border:1px dashed var(--sky-mid);border-radius:10px;padding:8px 14px;margin-top:6px}
+.ans summary{cursor:pointer;font-weight:700;color:var(--sky-dark)}
+.ans li{margin-bottom:6px;font-size:14.5px}
+@media (max-width:700px){.flow{grid-template-columns:1fr 1fr}.rules td:nth-child(2){white-space:normal}.sbody{padding:4px 14px 16px}}
+@media print{.sess{break-inside:auto}.sess:not([open])>.sbody{display:block}}
+</style></head><body><div class="wrap">
+
+<header class="hero">
+  <img src="image.png" alt="Amro Academy logo" onerror="if(!this.dataset.t){this.dataset.t=1;this.src='../image.png'}else{this.style.display='none'}">
+  <div><div class="eyebrow">Amro Academy · SAT Reading &amp; Writing</div>
+  <h1>Score Analysis and Study Plan</h1><p>Current SAT score: 1020 · English tutoring · 12 sessions</p></div>
+</header>
+
+<p class="lead">The official score report shows one clear priority: <b>Craft and Structure</b>, the largest part of the Reading &amp; Writing section, is in the lowest score band. This plan fixes it first, builds Information and Ideas next, and uses the grammar rules in Standard English Conventions for quick early gains.</p>
+
+<h2>1. Score report analysis</h2>
+<div class="dgrid">
+  <div class="domain"><h3>Craft and Structure</h3><span class="prio p1">Priority 1</span><div class="share" style="grid-column:1/-1">28% of the section · 13–15 questions</div><div class="segs"><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="band">Performance: 200–360</div></div>
+  <div class="domain"><h3>Information and Ideas</h3><span class="prio p2">Priority 2</span><div class="share" style="grid-column:1/-1">26% of the section · 12–14 questions</div><div class="segs"><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i></div><div class="band">Performance: 420–480</div></div>
+  <div class="domain"><h3>Standard English Conventions</h3><span class="prio p3">Quick gains</span><div class="share" style="grid-column:1/-1">26% of the section · 11–15 questions</div><div class="segs"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div><div class="band">Performance: 490–540</div></div>
+  <div class="domain"><h3>Expression of Ideas</h3><span class="prio p3">Maintain</span><div class="share" style="grid-column:1/-1">20% of the section · 8–12 questions</div><div class="segs"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><i></i><i></i></div><div class="band">Performance: 490–540</div></div>
+</div>
+<p class="note">Bars and score bands are copied from the official digital SAT score report.</p>
+
+<h3 style="margin:18px 0 8px;font-size:17px">What the report shows</h3>
+<div class="find"><b>Craft and Structure is the biggest opportunity.</b> At 200–360 it is in the lowest band, and with 13–15 questions it is the largest domain. These questions test vocabulary in context, the purpose and structure of a passage, and how two texts relate. Most of the score gain in this plan is expected here.</div>
+<div class="find"><b>Information and Ideas needs precise reading.</b> At 420–480, the errors are likely in evidence and inference questions, where the right answer must match every part of a claim and wrong answers are often too strong or off-topic.</div>
+<div class="find"><b>Conventions and Expression of Ideas are his relative strengths</b> (490–540). Grammar and punctuation follow a fixed set of rules, so Conventions can improve fastest. It comes early in the plan to build confidence and secure points.</div>
+<div class="find"><b>Starting point and target.</b> The domain bands suggest a Reading &amp; Writing score in the mid-400s. The goal for these 12 sessions is about <b>+100 points</b> in Reading &amp; Writing. The diagnostic test sets the exact starting point, and the two practice tests measure progress against it.</div>
+
+<h2>2. Session plan</h2>
+<p class="note">12 one-hour sessions, about two per week, scheduled around the student's availability. Teaching notes for sessions 1 and 2 are in <a href="#materials">Session materials</a>. The diagnostic and the final practice test are taken at home under timed conditions and reviewed in session.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>#</th><th>Topic</th><th>Domain</th><th>Homework</th></tr></thead>
+  <tbody><tr class="test"><td class="n">Before 1</td><td class="t">Diagnostic test (taken at home, timed: 2 × 32 minutes)</td><td><span class="dom-tag">All</span></td><td>Complete the diagnostic</td></tr><tr><td class="n">1</td><td>Diagnostic review; how the Reading &amp; Writing section works; timing (about 71 seconds per question)</td><td><span class="dom-tag">All</span></td><td>Diagnostic corrections + start an error log</td></tr><tr><td class="n">2</td><td>Boundaries: sentences, semicolons, colons, commas and dashes</td><td><span class="dom-tag">Conventions</span></td><td>Punctuation rules sheet + 25 questions</td></tr><tr><td class="n">3</td><td>Form, structure and sense: subject–verb agreement, verb tense, pronouns, possessives, modifiers</td><td><span class="dom-tag">Conventions</span></td><td>25 questions + vocabulary set 1 (25 words)</td></tr><tr><td class="n">4</td><td>Words in context I: finding the clue in the sentence, predicting the word, reversal words (“although,” “anything but”)</td><td><span class="dom-tag">Craft &amp; Structure</span></td><td>20 questions + vocabulary set 2</td></tr><tr><td class="n">5</td><td>Words in context II: high-frequency SAT words, tone and attitude words, meaning of a word as used in a passage</td><td><span class="dom-tag">Craft &amp; Structure</span></td><td>20 questions + vocabulary set 3</td></tr><tr><td class="n">6</td><td>Text structure and purpose; cross-text connections (how one author would respond to another)</td><td><span class="dom-tag">Craft &amp; Structure</span></td><td>15 questions + vocabulary set 4</td></tr><tr class="test"><td class="n">7</td><td class="t">Progress check: one timed module (27 questions, 32 minutes), then review</td><td><span class="dom-tag">All</span></td><td>Corrections of the module</td></tr><tr><td class="n">8</td><td>Central ideas, details and inferences: completing the logic of a passage</td><td><span class="dom-tag">Information &amp; Ideas</span></td><td>20 questions + vocabulary set 5</td></tr><tr><td class="n">9</td><td>Command of evidence (text): supporting or weakening a claim, choosing quotations from poems and stories</td><td><span class="dom-tag">Information &amp; Ideas</span></td><td>20 questions</td></tr><tr><td class="n">10</td><td>Command of evidence (data): reading tables and graphs, matching every part of a claim</td><td><span class="dom-tag">Information &amp; Ideas</span></td><td>15 questions + vocabulary set 6</td></tr><tr><td class="n">11</td><td>Transitions and rhetorical synthesis (student-notes questions); full-section timing strategy</td><td><span class="dom-tag">Expression of Ideas</span></td><td>25 questions</td></tr><tr class="test"><td class="n">12</td><td class="t">Final full Reading &amp; Writing practice test (taken at home beforehand), results review and next steps</td><td><span class="dom-tag">All</span></td><td>—</td></tr></tbody>
+</table></div>
+
+<h3 style="margin:22px 0 0;font-size:17px">How each 60-minute session runs</h3>
+<div class="steps">
+  <div class="step"><div class="m">10 <span>min</span></div><b>Homework review</b><p>Go through mistakes and update the error log.</p></div>
+  <div class="step"><div class="m">20 <span>min</span></div><b>Strategy lesson</b><p>One question type: how to recognize it and a step-by-step method.</p></div>
+  <div class="step"><div class="m">25 <span>min</span></div><b>Timed practice</b><p>SAT-style questions at real pace, about 71 seconds each.</p></div>
+  <div class="step"><div class="m">5 <span>min</span></div><b>Wrap-up</b><p>Key takeaway and homework for the next session.</p></div>
+</div>
+
+<h2>3. Strategies he will learn</h2>
+<ul>
+  <li><b>Words in context:</b> cover the choices, find the clue in the sentence, predict a word, then match it. Watch for reversal words such as “although,” “far from” and “anything but.”</li>
+  <li><b>Structure and purpose:</b> say what the underlined sentence does (example, contrast, qualification, conclusion) before reading the choices.</li>
+  <li><b>Evidence questions:</b> the right answer supports <i>every</i> part of the claim. A choice that fits two explanations equally supports neither.</li>
+  <li><b>Inferences:</b> choose what <i>must</i> be true. Eliminate choices with absolute words such as “never” or “could not” unless the text proves them.</li>
+  <li><b>Data questions:</b> check that the numbers match the exact comparison in the claim (a share, a change, or a difference).</li>
+  <li><b>Grammar:</b> identify the rule being tested (sentence boundary, agreement, tense, modifier) before choosing.</li>
+  <li><b>Timing:</b> about 71 seconds per question. Skip a hard question, mark it for review, and return.</li>
+</ul>
+
+<h2>4. How progress is measured</h2>
+<ul>
+  <li><b>Diagnostic test (before session 1):</b> baseline score by domain and skill.</li>
+  <li><b>Progress check (session 7):</b> one timed module compared with the diagnostic.</li>
+  <li><b>Final practice test (session 12):</b> a full Reading &amp; Writing section with an estimated score, compared with the diagnostic.</li>
+  <li><b>Error log:</b> every mistake recorded by question type, to show which skills are improving.</li>
+  <li><b>Written report</b> after the final test, with results by domain and a plan for the next stage.</li>
+</ul>
+
+<h2>5. What we ask from the student</h2>
+<div class="two">
+  <div class="box"><h3>Homework</h3><ul><li>Complete each assignment before the next session.</li><li>Learn each vocabulary set; short quizzes start each session.</li><li>Keep the error log up to date.</li></ul></div>
+  <div class="box"><h3>Tests</h3><ul><li>Take the diagnostic and final test in one sitting, timed, without help.</li><li>Use the real timing: 32 minutes per module.</li><li>Let us know at least 24 hours in advance to reschedule a session.</li></ul></div>
+</div>
+
+<h2 id="materials">6. Session materials</h2>
+<p class="note">Teaching notes for the first two sessions: lesson flow, what to explain, worked examples and practice with answers. Click a session to open it.</p>
+
+<details class="sess" open>
+<summary><span class="sn">Session 1</span> Diagnostic review and how the Reading &amp; Writing section works</summary>
+<div class="sbody">
+
+<div class="flow">
+  <div><b>10 min</b>Diagnostic results</div>
+  <div><b>10 min</b>Test format and scoring</div>
+  <div><b>20 min</b>Tour of the question types</div>
+  <div><b>15 min</b>The core method + traps</div>
+  <div><b>5 min</b>Error log + homework</div>
+</div>
+
+<h4>1. The test format</h4>
+<table class="mini"><tbody>
+<tr><td>Structure</td><td>2 modules × 27 questions. Each module has 32 minutes (64 minutes in total). 2 questions per module are unscored trial questions, and the student can't tell which.</td></tr>
+<tr><td>Adaptive</td><td>Module 1 has a mix of easy, medium and hard questions. A strong Module 1 leads to a harder Module 2, which unlocks the top scores. <b>Module 1 accuracy matters most.</b></td></tr>
+<tr><td>Passages</td><td>Every question has its own short passage (about 25–150 words) and four choices. Some passages are poems, stories, or tables and graphs.</td></tr>
+<tr><td>Order</td><td>Questions of the same type are grouped: Craft &amp; Structure → Information &amp; Ideas → Standard English Conventions → Expression of Ideas. Within each group they get harder.</td></tr>
+<tr><td>Scoring</td><td>Reading &amp; Writing is scored 200–800 (half of the total 400–1600). <b>No penalty for wrong answers: never leave a question blank.</b></td></tr>
+<tr><td>Timing</td><td>About 71 seconds per question. Grammar questions take about 30–45 seconds, so the time saved goes to the harder reading questions.</td></tr>
+</tbody></table>
+
+<h4>2. The question types (what each one asks)</h4>
+<div class="table-wrap"><table class="mini">
+<thead><tr><th>Type</th><th>How to recognize it</th><th>The key move</th></tr></thead>
+<tbody>
+<tr><td><b>Words in context</b></td><td>“Most logical and precise word,” or “as used in the text, ___ most nearly means”</td><td>Find the clue in the sentence and predict your own word before looking.</td></tr>
+<tr><td><b>Text structure and purpose</b></td><td>“Main purpose,” “function of the underlined sentence,” “overall structure”</td><td>Say what the sentence <i>does</i> (contrast, example, qualification), not what it says.</td></tr>
+<tr><td><b>Cross-text connections</b></td><td>Text 1 and Text 2: “How would the author of Text 2 respond…”</td><td>Summarize each text in one line, then decide: agree, disagree or partly agree.</td></tr>
+<tr><td><b>Central ideas and details</b></td><td>“Main idea,” “according to the text”</td><td>The answer covers the whole passage, not one detail.</td></tr>
+<tr><td><b>Command of evidence (text)</b></td><td>“Which finding would most directly support/weaken…,” “which quotation illustrates…”</td><td>Rewrite the claim in your own words, then find the choice that proves <i>every</i> part of it.</td></tr>
+<tr><td><b>Command of evidence (data)</b></td><td>A table or graph + “which choice uses data to complete/support…”</td><td>Read the claim first. The answer must be true in the data <i>and</i> match the claim.</td></tr>
+<tr><td><b>Inferences</b></td><td>The passage ends in a blank: “most logically completes the text”</td><td>Follow the logic step by step. Choose what <i>must</i> follow, not what might.</td></tr>
+<tr><td><b>Boundaries</b></td><td>Choices differ only in punctuation</td><td>Find the split point and check for complete sentences (session 2).</td></tr>
+<tr><td><b>Form, structure and sense</b></td><td>Choices are forms of one word (verb tense, pronoun, possessive)</td><td>Find the subject or the word it refers to (session 3).</td></tr>
+<tr><td><b>Transitions</b></td><td>“Most logical transition”</td><td>Decide how the two sentences relate (contrast, cause, addition, example) before looking.</td></tr>
+<tr><td><b>Rhetorical synthesis</b></td><td>Bullet-point student notes + “the student wants to…”</td><td>Read <i>only the goal</i> first. The answer does exactly what the goal says.</td></tr>
+</tbody></table></div>
+
+<h4>3. The core method (for every reading question)</h4>
+<ol class="method">
+  <li><b>Read the question first.</b> It tells you what to look for in the passage.</li>
+  <li><b>Read the passage actively.</b> What is the main claim? Where does it turn (“however,” “but,” “yet”)?</li>
+  <li><b>Predict</b> the answer in your own words before reading the choices.</li>
+  <li><b>Eliminate</b> wrong choices for a reason you can point to in the text.</li>
+  <li><b>Choose and move on.</b> If two choices are left after about 90 seconds, pick one, mark the question for review and return later.</li>
+</ol>
+
+<h4>4. The five wrong-answer traps</h4>
+<div class="traps">
+  <div><b>Too extreme</b>“always,” “never,” “proves,” “entirely,” when the passage says “suggests” or “some.”</div>
+  <div><b>True but irrelevant</b>Accurate according to the passage, but doesn't answer the question asked.</div>
+  <div><b>Half right</b>The first half matches, and the second half is wrong or not mentioned.</div>
+  <div><b>Opposite</b>Reverses the passage's meaning. Common after “although” or “not.”</div>
+  <div><b>Outside knowledge</b>Sounds true in real life, but the passage doesn't say it.</div>
+</div>
+
+<div class="ex"><div class="ex-h">Worked example: trap spotting (diagnostic Module 1, Q9)</div>
+<p>The text: teachers in Lindqvist's schools reported more collaboration, but test scores were <i>not</i> significantly different.</p>
+<p>✗ <i>“Both collaboration and test scores increased”</i> is <b>half right</b>.<br>
+✗ <i>“Test scores improved even though teachers collaborated less”</i> is the <b>opposite</b>.<br>
+✓ <i>“Teachers reported more collaboration, but scores were not significantly different”</i> matches both parts.</p></div>
+
+<h4>5. Reviewing the diagnostic</h4>
+<ul>
+  <li>Open the report and group his wrong answers by <b>domain and skill</b>. Expect most of them in Craft &amp; Structure, as the official report suggests.</li>
+  <li>For each wrong answer, ask him: <i>“Why did you pick it? Why is the right answer right?”</i> Then label the cause:
+    <b>K</b> = didn't know the content (rule or word), <b>R</b> = misread the passage or the question, <b>T</b> = ran out of time or rushed.</li>
+  <li>Check the question timer: long times on correct answers show a speed problem. ⏰ marks show answers given after time ran out.</li>
+  <li>Choose 5–6 wrong answers to review together. Leave the rest for homework corrections.</li>
+</ul>
+
+<h4>6. The error log (set it up today)</h4>
+<div class="table-wrap"><table class="mini log">
+<thead><tr><th>#</th><th>Question type</th><th>My answer</th><th>Correct</th><th>Cause (K / R / T)</th><th>Why the correct answer is right / what I'll do next time</th></tr></thead>
+<tbody><tr><td>M1 Q9</td><td>Central ideas</td><td>D</td><td>A</td><td>R</td><td>Missed “however.” Check that both parts of the answer match.</td></tr></tbody>
+</table></div>
+
+<div class="hw"><b>Homework:</b> Correct every diagnostic mistake in the error log, writing one sentence on why the right answer is right. Read the session 2 rules sheet.</div>
+<div class="tip"><b>Teaching tip:</b> keep the tone positive. His Conventions and Expression of Ideas bands (490–540) are real strengths, and session 2 will deliver quick wins there.</div>
+</div>
+</details>
+
+<details class="sess">
+<summary><span class="sn">Session 2</span> Boundaries: sentences, semicolons, colons, commas and dashes</summary>
+<div class="sbody">
+
+<div class="flow">
+  <div><b>10 min</b>Homework review</div>
+  <div><b>5 min</b>Clauses</div>
+  <div><b>20 min</b>The 7 rules</div>
+  <div><b>20 min</b>Practice (8 questions)</div>
+  <div><b>5 min</b>Wrap-up</div>
+</div>
+
+<h4>The one idea behind everything: clauses</h4>
+<div class="two">
+  <div class="box"><h3>Independent clause (IC)</h3><p>A subject and a verb that can stand alone as a sentence.</p><p class="exs"><i>The canyon is deep.</i></p></div>
+  <div class="box"><h3>Dependent clause (DC)</h3><p>A subject and a verb that <b>can't</b> stand alone. It starts with a word like <i>because, although, when, if, which, who, while, since</i>.</p><p class="exs"><i>Because the canyon is deep…</i></p></div>
+</div>
+<p><b>The method:</b> when the choices differ only in punctuation, find where the punctuation goes (the split point). Then ask: <b>is the part before it a complete sentence? Is the part after it a complete sentence?</b> The answer decides the punctuation.</p>
+
+<h4>Rule 1: joining two complete sentences (IC + IC)</h4>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td>IC<b>.</b> IC</td><td>The team mapped the canyon. Its deepest point is 2 km down.</td></tr>
+<tr class="ok"><td>✓</td><td>IC<b>;</b> IC</td><td>The team mapped the canyon; its deepest point is 2 km down.</td></tr>
+<tr class="ok"><td>✓</td><td>IC<b>, and</b> IC</td><td>The team mapped the canyon, and its deepest point is 2 km down. <span class="sm">(FANBOYS: for, and, nor, but, or, yet, so)</span></td></tr>
+<tr class="ok"><td>✓</td><td>IC<b>:</b> IC &nbsp;/&nbsp; IC <b>—</b> IC</td><td>Only when the second sentence explains or expands on the first.</td></tr>
+<tr class="bad"><td>✗</td><td>IC<b>,</b> IC</td><td>The team mapped the canyon, its deepest point is 2 km down. <b>(comma splice)</b></td></tr>
+<tr class="bad"><td>✗</td><td>IC IC</td><td>The team mapped the canyon its deepest point is 2 km down. <b>(run-on)</b></td></tr>
+</tbody></table>
+<p class="sm"><b>Remember:</b> a period and a semicolon do the same job. If two choices are “X.” and “X;” with the same words after, both can't be right, so the answer is something else.</p>
+
+<h4>Rule 2: “however,” “therefore,” “moreover,” “for example,” “thus”</h4>
+<p>These are <b>not</b> FANBOYS, so a comma alone can't join two sentences with them.</p>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td>IC<b>; however,</b> IC</td><td>The drug worked in trials; however, it failed in larger studies.</td></tr>
+<tr class="ok"><td>✓</td><td>IC<b>. However,</b> IC</td><td>The drug worked in trials. However, it failed in larger studies.</td></tr>
+<tr class="bad"><td>✗</td><td>IC<b>, however,</b> IC</td><td>The drug worked in trials, however, it failed in larger studies.</td></tr>
+<tr class="ok"><td>✓</td><td>Middle of one sentence</td><td>The results, however, were not repeated. <span class="sm">(fine: still one IC)</span></td></tr>
+</tbody></table>
+
+<h4>Rule 3: dependent clauses and introductory phrases</h4>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td>DC<b>,</b> IC</td><td>Although the species look alike, their songs differ.</td></tr>
+<tr class="ok"><td>✓</td><td>IC DC</td><td>Their songs differ because their brains differ. <span class="sm">(usually no comma)</span></td></tr>
+<tr class="bad"><td>✗</td><td>DC<b>.</b> IC</td><td>Although the species look alike. Their songs differ. <b>(fragment)</b></td></tr>
+<tr class="bad"><td>✗</td><td>DC<b>;</b> IC</td><td>A semicolon needs a complete sentence on <b>both</b> sides.</td></tr>
+</tbody></table>
+
+<h4>Rule 4: the colon</h4>
+<p>A colon must come <b>after a complete sentence</b>. What follows explains, lists or gives an example.</p>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td></td><td>The expedition needed three things: rope, lanterns and maps.</td></tr>
+<tr class="bad"><td>✗</td><td></td><td>The expedition needed: rope, lanterns and maps. <b>(“needed” isn't a complete sentence)</b></td></tr>
+<tr class="bad"><td>✗</td><td></td><td>It included items such as: rope and maps. <b>(never after “such as,” “including” or “like”)</b></td></tr>
+</tbody></table>
+
+<h4>Rule 5: extra information (nonessential elements)</h4>
+<p>Extra information that can be removed without breaking the sentence is enclosed by <b>two matching marks</b>: two commas, two dashes or two parentheses. <b>Never mix them.</b></p>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td></td><td>The novel, <u>a story told in letters</u>, was praised.</td></tr>
+<tr class="ok"><td>✓</td><td></td><td>The novel — <u>a story told in letters</u> — was praised.</td></tr>
+<tr class="bad"><td>✗</td><td></td><td>The novel — a story told in letters, was praised. <b>(mixed marks)</b></td></tr>
+<tr class="bad"><td>✗</td><td></td><td>The novel, a story told in letters was praised. <b>(second comma missing)</b></td></tr>
+</tbody></table>
+<p class="sm"><b>Removal test:</b> cover the part between the marks. If the sentence still works, the marks are right. <b>Essential vs extra:</b> “researcher Ana Ruiz found…” has <b>no</b> commas, because the name identifies which researcher. “Ana Ruiz, a researcher, found…” has commas, because the description is extra. Use <i>which</i> with commas, and <i>that</i> with no commas.</p>
+
+<h4>Rule 6: where never to put punctuation</h4>
+<ul class="never">
+  <li>Between a subject and its verb: ✗ <i>The decision by the officials<b>,</b> was praised.</i></li>
+  <li>Between a verb and its object: ✗ <i>The team found<b>,</b> a new species.</i></li>
+  <li>Between a preposition and its object: ✗ <i>a story told entirely through<b>,</b> letters.</i></li>
+  <li>Before “that” starting a clause: ✗ <i>She argued<b>,</b> that the data were flawed.</i></li>
+</ul>
+<p class="sm">Hard SAT questions often put a long phrase between the subject and the verb to tempt a comma. Find the real subject and verb first.</p>
+
+<h4>Rule 7: lists</h4>
+<table class="mini rules"><tbody>
+<tr class="ok"><td>✓</td><td>Simple list</td><td>rope, lanterns, and maps</td></tr>
+<tr class="ok"><td>✓</td><td>Items already contain commas</td><td>rope, which was rated for heavy loads<b>;</b> lanterns, which ran on oil<b>;</b> and maps <span class="sm">(semicolons separate the items)</span></td></tr>
+</tbody></table>
+
+<h4>Cheat sheet</h4>
+<div class="table-wrap"><table class="mini">
+<thead><tr><th>Mark</th><th>Needs before it</th><th>Can come after it</th></tr></thead>
+<tbody>
+<tr><td><b>.</b> &nbsp; <b>;</b></td><td>Complete sentence</td><td>Complete sentence</td></tr>
+<tr><td><b>:</b></td><td>Complete sentence</td><td>Anything that explains: a list, word, phrase or sentence</td></tr>
+<tr><td><b>, + FANBOYS</b></td><td>Complete sentence</td><td>Complete sentence</td></tr>
+<tr><td><b>,</b> alone</td><td colspan="2">Can't join two complete sentences. It's used after an introductory clause or phrase, in lists, and in pairs around extra information.</td></tr>
+<tr><td><b>— —</b> / <b>, ,</b></td><td colspan="2">Used in pairs around extra information (one dash alone can also introduce an explanation, like a colon).</td></tr>
+</tbody></table></div>
+
+<h4>Worked examples</h4>
+<div class="ex"><div class="ex-h">Example 1 (diagnostic Module 1, Q16)</div>
+<p>The research team spent three seasons mapping the canyon ______ its deepest point, they found, lies nearly two kilometers below the rim.</p>
+<p>A) canyon, &nbsp; B) canyon, which &nbsp; C) canyon &nbsp; D) canyon;</p>
+<p><b>Split point:</b> “The research team spent three seasons mapping the canyon” is a complete sentence. “its deepest point … lies nearly two kilometers below the rim” is also a complete sentence. IC + IC needs a period or a semicolon. A is a comma splice, C is a run-on, and B makes “which its deepest point lies” ungrammatical. <b>Answer: D.</b></p></div>
+<div class="ex"><div class="ex-h">Example 2 (diagnostic Module 1, Q19)</div>
+<p>The novelist's latest book, a story told entirely through ______ has been praised for its inventive structure.</p>
+<p>A) letters— &nbsp; B) letters, &nbsp; C) letters; &nbsp; D) letters</p>
+<p>“a story told entirely through letters” is extra information that opened with a <b>comma</b>, so it must close with a comma. <b>Answer: B.</b> A mixes the marks, C puts a semicolon after a part that isn't a complete sentence, and D leaves the pair unclosed.</p></div>
+
+<h4>Practice (8 questions)</h4>
+<ol class="prac">
+  <li>Honeybees communicate the location of food through a “waggle dance” ______ the angle of the dance shows the direction of the food relative to the sun.<br>A) dance, &nbsp; B) dance; &nbsp; C) dance &nbsp; D) dance, and,</li>
+  <li>Although the painting had been attributed to Rembrandt for centuries ______ a recent analysis of its brushwork suggests it was made by one of his students.<br>A) centuries; &nbsp; B) centuries. &nbsp; C) centuries, &nbsp; D) centuries:</li>
+  <li>The spacecraft carried three main instruments ______ a camera, a spectrometer and a magnetometer.<br>A) instruments: &nbsp; B) instruments, such as: &nbsp; C) instruments; &nbsp; D) instruments, which</li>
+  <li>The architect Zaha Hadid ______ was known for buildings with flowing, curved forms.<br>A) Hadid, &nbsp; B) Hadid; &nbsp; C) Hadid &nbsp; D) Hadid—</li>
+  <li>The early results were promising ______ the researchers decided to delay publication until the study was repeated.<br>A) promising; nevertheless, &nbsp; B) promising, nevertheless, &nbsp; C) promising nevertheless &nbsp; D) promising, nevertheless</li>
+  <li>The coral reef — home to more than 400 species of fish ______ is threatened by rising ocean temperatures.<br>A) fish, &nbsp; B) fish; &nbsp; C) fish — &nbsp; D) fish</li>
+  <li>The committee members who reviewed the proposal over several months ______ agreed that it should be funded.<br>A) months, &nbsp; B) months; &nbsp; C) months: &nbsp; D) months</li>
+  <li>The festival featured musicians from Lagos, Nigeria ______ Lima, Peru; and Hanoi, Vietnam.<br>A) Nigeria, &nbsp; B) Nigeria; &nbsp; C) Nigeria: &nbsp; D) Nigeria</li>
+</ol>
+<details class="ans"><summary>Show answers and explanations</summary>
+<ol>
+  <li><b>B.</b> IC + IC: “Honeybees … dance” and “the angle … sun” are both complete sentences. A is a comma splice and C is a run-on.</li>
+  <li><b>C.</b> “Although …” is a dependent clause, so it takes a comma before the main sentence. A period or semicolon would leave a fragment.</li>
+  <li><b>A.</b> A complete sentence followed by a list takes a colon. Never use a colon after “such as.”</li>
+  <li><b>C.</b> “The architect Zaha Hadid” is essential identification, so there's no comma, and no punctuation goes between the subject and the verb (“was”).</li>
+  <li><b>A.</b> “Nevertheless” is not a FANBOYS word, so joining two complete sentences needs a semicolon before it and a comma after.</li>
+  <li><b>C.</b> The extra information opened with a dash, so it must close with a dash.</li>
+  <li><b>D.</b> “members … months” is one long subject. Put no punctuation between it and the verb “agreed.”</li>
+  <li><b>B.</b> The list items already contain commas (city, country), so semicolons separate the items.</li>
+</ol></details>
+
+<div class="hw"><b>Homework:</b> 25 Boundaries questions (worksheet) and the rules sheet. In the error log, write the rule number for each mistake.</div>
+<div class="tip"><b>Teaching tip:</b> make him say the split-point test aloud on every question today (“complete sentence before? complete sentence after?”). Once it becomes automatic, these questions take him about 30 seconds.</div>
+</div>
+</details>
+
+<div class="sign">I'm happy to discuss the plan or adjust it at any time.<b style="margin-top:8px">Mohamad Ali Amro</b>Amro Academy</div>
+</div></body></html>
